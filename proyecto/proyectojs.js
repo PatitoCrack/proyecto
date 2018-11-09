@@ -32,12 +32,12 @@ if (columna < 1 ) {alert("Columna es no valida")
 
 //arrays filas
 
-var fila1=Array(2,6,5,4,5,5);
-var fila2=Array(4,6,6,3,2,6);
-var fila3=Array(3,4,1,2,6,3);
-var fila4=Array(1,4,2,5,6,1);
-var fila5=Array(5,5,3,2,2,1);
-var fila6=Array(4,1,4,3,1,3);
+var fila1=Array(1,2,3,4,5,6);
+var fila2=Array(2,2,3,4,5,6);
+var fila3=Array(3,2,3,4,5,6);
+var fila4=Array(4,2,3,4,5,6);
+var fila5=Array(5,2,3,4,5,6);
+var fila6=Array(6,2,3,4,5,6);
 //arrays colores
 
 var colores1=Array("blue","yellow","pink","red","yellow","blue");
@@ -78,19 +78,43 @@ for(let i=0; i <long1; i++){
 
 tablero()
 
-var posInicial=Array(0,0)
-var posFinal=Array(0,0)
-var randomarray=Array(fila1,fila2,fila3,fila4,fila5,fila6)
+var posInicial=[0,0]
+var posFinal=[0,0]
 
-function posicion(){var numero_randomarray=randomarray.length
-numero1=Math.floor(Math.random()*numero_randomarray)
-var arrayelegido= randomarray[numero1]
-console.log(arrayelegido);
-//numero de fila
-console.log(numero1)
-}
-if (numero1==1) {console.log("hola")
+var num1 = +Math.floor((Math.random() * 6)+1 );
+var num2 = +Math.floor((Math.random() * 6)+1 );
+var num3 = +Math.floor((Math.random() * 6)+1 );
+var num4 = +Math.floor((Math.random() * 6)+1 );
 
+while(num1 === num3){
+  num3 = +Math.floor((Math.random()*6)+1)
 }
 
-posicion()
+while(num2 === num4){
+  num4 = +Math.floor((Math.random()*6)+1)
+}
+
+function caAleatoria(){
+  for(var i = 0; i < 1; i++)
+  console.log(posInicial[posInicial.length -2] = num1);
+}
+
+for (var i=0; i < 1; i++){
+  console.log(posInicial[posInicial.length -1] = num2)
+  };
+
+
+for (var i=0; i < 1; i++){
+  console.log(posFinal[posFinal.length -2] = num3)
+  };
+
+
+for (var i=0; i < 1; i++){
+  console.log(posFinal[posFinal.length -1] = num4)
+  };
+
+
+var random =caAleatoria()
+
+console.log(`Posicion inicial ${posInicial}`)
+console.log(`Posicion final ${posFinal}`)
